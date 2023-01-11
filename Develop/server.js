@@ -22,17 +22,15 @@ app.get('/api/reviews', (req, res) => {
 });
 
 // POST request to add a note
-// NOTE: Data persistence isn't set up yet, so this will only exist in memory until we implement it
 app.post('/api/notes', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to add a new note`);
 
-  // Destructuring assignment for the items in req.body
   const { title, text } = req.body;
 
   // If all the required properties are present
   if (title && text) {
-    // Variable for the object to be save
+    // Variable for the object to be saved
     const newNote = {
       title,
       text,
