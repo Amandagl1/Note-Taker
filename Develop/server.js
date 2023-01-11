@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const uuid = require('./helpers/uuid');
+
 
 const PORT = 3001;
 
@@ -11,18 +13,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 // GET request for reviews
 app.get('/api/reviews', (req, res) => {
-  res.status(200).json(reviews);
+  res.status(200).json(notes);
   res.json(`${req.method} request received to get note`);
 
 });
 
 // POST request to add a note
-app.post('/api/notes', (req, res) => {
+app.post('/notes', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to add a new note`);
 
@@ -34,6 +36,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
+      note_id: uuid(),
     };
 
     const response = {
@@ -41,10 +44,22 @@ app.post('/api/notes', (req, res) => {
       body: newNote,
     };
 
+    // Convert the data to a string to save the note
+    const noteString = JSON.stringify(newNote);
+
+    // Writing the string to a file
+    fs.writeFile(`./db/${newNote.title}.json`, noteString, (err) =>
+      err
+        ? console.error(err)
+        : console.log(
+            `Review for ${newNote.title} has been written to JSON file`
+          )
+    );
+
     console.log(response);
     res.status(201).json(response);
   } else {
-    res.status(500).json('Error in creating new');
+    res.status(500).json('Error in creating note');
   }
 });
 
