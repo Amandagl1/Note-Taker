@@ -1,9 +1,10 @@
 const express = require('express');
 const path = require('path');
 const uuid = require('./helpers/uuid');
+const notes = require('./db/notes');
 
 
-const PORT = 3001;
+const PORT =3001;
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.get('/', (req, res) =>
 );
 
 // GET request for reviews
-app.get('/api/reviews', (req, res) => {
+app.get('/api/notes', (req, res) => {
   res.status(200).json(notes);
   res.json(`${req.method} request received to get note`);
 
