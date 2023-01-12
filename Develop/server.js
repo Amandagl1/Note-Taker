@@ -18,8 +18,8 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
-app.get('/db', (req, res) =>
-  res.sendFile(path.join(__dirname, 'db.json'))
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, '/routes/routes.js'))
 );
 
 
