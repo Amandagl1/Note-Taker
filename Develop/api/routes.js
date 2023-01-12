@@ -6,8 +6,7 @@ const fs = require('fs');
 fs.readFileSync('db/db.json','utf8', (error, notes) => {
 
   if (error) throw err;
-
-  var data = JSON.parse(notes);
+  let data = JSON.parse(notes);
 
 }).then((notes) => {
   return res.json((notes));
