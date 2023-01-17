@@ -4,10 +4,10 @@
 ![ICS](https://img.shields.io/badge/license-ICS-orange)
 
 Table of Contents
-- [License](#license)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
+- [License](#License)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Credits](#Credits)
 
 
 # Installation
@@ -30,7 +30,7 @@ Click on each note view the details:
 
 
 # Deployed Application
-
+Check out the [Note Taker](https://note-taker-2023.herokuapp.com/)app on Heroku.
 
 # Contact
 Github: Amandagl1
