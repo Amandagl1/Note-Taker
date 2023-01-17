@@ -4,11 +4,15 @@
 ![ICS](https://img.shields.io/badge/license-ICS-orange)
 
 Table of Contents
-- [License](#License)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Credits](#Credits)
+- [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployed Application](#deployed-application )
+- [Contact](#contact)
 
+
+# License
+Read more about the license herr: [ICS](https://choosealicense.com/licenses/isc/)
 
 # Installation
 
