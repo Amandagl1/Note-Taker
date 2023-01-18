@@ -3,7 +3,7 @@
 ## Badges
 ![ICS](https://img.shields.io/badge/license-ICS-orange)
 
-Table of Contents
+## Table of Contents
 - [License](#license)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -11,10 +11,10 @@ Table of Contents
 - [Contact](#contact)
 
 
-# License
+## License
 Read more about the license herr: [ICS](https://choosealicense.com/licenses/isc/)
 
-# Installation
+## Installation
 
 Run this command in the terminal to install inquirer.
 ```
@@ -22,7 +22,7 @@ npm i inquirer@8.2.4
 ```
 
 
-# Usage
+## Usage
 When you run the application in the browser, you'll be taken to the starter page: 
 ![Starter page](images/starter-page.png)
 
@@ -33,9 +33,14 @@ Click on each note view the details:
 ![Selected Note](images/individual.png)
 
 
-# Deployed Application
+## Deployed Application
 Check out the [Note Taker](https://note-taker-2023.herokuapp.com/) app on Heroku.
 
 # Contact
+
+### Questions? 
+Reach me here:
+
 Github: Amandagl1
+
 Email: leeandama87@gmail.com
